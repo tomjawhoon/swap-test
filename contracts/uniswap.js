@@ -20,6 +20,7 @@ const Uniswap = (web3) => {
         return sendTransaction(methodData, { from, privateKey, value });
     }
 
+    
     // call
 
     // const getBalance = ({ from }) => {

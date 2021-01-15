@@ -41,6 +41,8 @@ const MKR = new Token(chainId, tokens.mkr.address, tokens.mkr.decimals);
 const KNC = new Token(chainId, tokens.knc.address, tokens.knc.decimals);
 
 const main = async () => {
+    const startTime = new Date().valueOf()
+    console.log("startTime ======================== >", startTime) //
 
     // const USDCWETHPair = await Fetcher.fetchPairData(USDC, WETH[ChainId.MAINNET])
     // const DAIUSDCPair = await Fetcher.fetchPairData(DAI, USDC)
@@ -78,11 +80,9 @@ const main = async () => {
         to,
         deadline,
         { from: walletInfo.address, privateKey: walletInfo.privateKey, value },
-        // console.log("SHOWWWWWWW WWWWWWW")
-        
+        console.log('blocktime ======= >', new Date().valueOf() - startTime)
     )
-
-    console.log('res', res);
+    console.log('res show finish =>>.>', res);
 }
 
 main();

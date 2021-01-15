@@ -49,10 +49,10 @@ const main = async () => {
     // const trade = new Trade(route, new TokenAmount(DAI, '1000000000000000000'), TradeType.EXACT_INPUT)
 
     console.log("Test");
-    
+
 
     const DAIWETHPair = await Fetcher.fetchPairData(DAI, WETH[chainId]);
-    const KNCWETHPair = await Fetcher.fetchPairData(KNC,  WETH[chainId]);
+    const KNCWETHPair = await Fetcher.fetchPairData(KNC, WETH[chainId]);
     console.log("Test2", KNCWETHPair);
 
 
@@ -80,7 +80,7 @@ const main = async () => {
         amountOut,
         amountInMax,
     });
-    
+
     const res = await uniswapContract.methods.swapTokensForExactTokens(
         amountOut,
         amountInMax,
